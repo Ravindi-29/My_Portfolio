@@ -15,7 +15,7 @@ export default function Home() {
               <a href="/projects" className="btn secondary">View Projects</a>
           </div>
        <div className="home right">
-    <img src="/Profile.jpeg" alt="Home" className="profile-img" />
+    <img src={process.env.PUBLIC_URL + '/Profile.jpeg'} alt="Home" className="profile-img" />
 </div>
         </div>
 

@@ -5,7 +5,7 @@ import Navbar from '../Components/Navbar';
 function ProjectCard(props) {
   return (
     <div className="project-card">
-      {props.image && <img src={props.image} alt={props.title} className="project-image" />}
+      {props.image && <img src={process.env.PUBLIC_URL + props.image} alt={props.title} className="project-image" />}
       <h3>{props.title}</h3>
       <p>{props.description}</p>
       <p><strong>Technologies:</strong> {props.technologies}</p>
@@ -34,11 +34,18 @@ export default function Projects() {
                     image="/Expense_Tracker.png"
                 />
                 <ProjectCard
-                    title="Personal Portfolio Website"
-                    description="A personal portfolio website to showcase my projects, skills, and experience."
-                    technologies="HTML, CSS, JavaScript, React"
-                    githubUrl="https://github.com/Ravindi-29/Portfolio.git"
-                    image="/Portfolio.png"
+                    title="Inventory Management System"
+                    description="A system to manage and track inventory levels, orders, and shipments."
+                    technologies="HTML, CSS, JavaScript, React, Node.js, MySQL"
+                    githubUrl="https://github.com/Ravindi-29/Inventory-Management-System.git"
+                    image="/Inventory.png"
+                />
+                <ProjectCard
+                    title="Career Suggestion System"
+                    description="A system to suggest career paths based on user interests and skills."
+                    technologies="PHP, CSS, JavaScript"
+                    githubUrl="https://github.com/Ravindi-29/career-suggestion-system.git"
+                    image="/Career_Suggestion.png"
                 />
             </div>
         </div>
